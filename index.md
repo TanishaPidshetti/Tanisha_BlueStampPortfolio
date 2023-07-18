@@ -35,11 +35,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+With the Raspberry Pi setup complete, it was time for my second milestone of building the base project. I started with creating a virtual envornment to keep installed libraries adn packages sperate from my main terminal envornment. Once I activated the new virtual envornment, I began to download different libraries to allow OpenCV in proccessing images and videos, the TensorFlow Lite backend, and GUI processing. I faced many challenges during this step as many of the libraries I needed to download was not availble and I had to find replacements. When the errors and issues still persisted, I attempted to approach this projet differently. 
+I installed the TenserFlow Lite runtime directly onto my Raspberry Pi and downloaded the files with the data and code the object detection program would use onto my virtual envornonment. I faced new issues with downloading the setup files, however was soon able to figure it out. With all the libraries, disprecenscies, and packages set, I was able to run the program on my Raspberry Pi. A video feed in realtime would open up and have red boxes outline each detected object with the name  as well as a confidence marker. With the base project successful, I was ready for the nect milestone. 
+
 
 # First Milestone
 
