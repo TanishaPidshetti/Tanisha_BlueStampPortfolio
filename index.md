@@ -21,11 +21,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+For my final milestone, my goal was to implement changes to the code that would allow me to use the data of the detected object. However, before I could start, I had to gain a better understanding of the code. The program utilized OpenCV, a Python library for computer vision, and tflite, a flexible machine learning model library. It performed object detection on camera-captured images, visualizing results with red boxes, labels, and confidence markers. Objects below a confidence threshold of 0.3 were ignored. To get a hands-on understanding, I aimed to add a simple command, printing "Found" when the desired object was detected. Once I felt more confident with the code, my next step was to take a picture once the desired object was found. I used flags to ensure all conditions were met to prevent repition and saved each image to the desktop. I then attempted to connect the servo motor to the Raspberry Pi. Unfortunaly, I faced serveal challenges with servo jitter. I later learned that changing the pin factory would help prevent this issue. I tried several versions of pin factory before finding a combination of a certain pin factory and the use of pulses rather than degrees worked better. Wiht everything set, I created a boc to hole the setup and make it look more presentable. After facing numerous challenges and enduring through various obstacles, I was finally able to succefuly modify and create someting of what I had learned. I
 
 
 
