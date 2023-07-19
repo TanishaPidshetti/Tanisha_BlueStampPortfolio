@@ -1,5 +1,5 @@
 # Object Detection with Tenserflow and Raspberry PI
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+This project uses an integration of Tenserflow and tflite on Raspberry Pi to detect and label objects. In this project, based on any desired object, the program will capture a picture and move a servo motor to point to a label listing the object's name.  
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -17,7 +17,7 @@ You should comment out all portions of your portfolio that you have not complete
   
 # Final Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N-vriJu8_hM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For my final milestone, my goal was to implement changes to the code that would allow me to use the data of the detected object. However, before I could start, I had to gain a better understanding of the code. The program utilized OpenCV, a Python library for computer vision, and tflite, a flexible machine learning model library. It performed object detection on camera-captured images, visualizing results with red boxes, labels, and confidence markers. Objects below a confidence threshold of 0.3 were ignored. To get a hands-on understanding, I aimed to add a simple command, printing "Found" when the desired object was detected. Once I felt more confident with the code, my next step was to take a picture once the desired object was found. I used flags to ensure all conditions were met to prevent repition and saved each image to the desktop. I then attempted to connect the servo motor to the Raspberry Pi. Unfortunaly, I faced serveal challenges with servo jitter. I later learned that changing the pin factory would help prevent this issue. I tried several versions of pin factory before finding a combination of a certain pin factory and the use of pulses rather than degrees worked better. Wiht everything set, I created a boc to hole the setup and make it look more presentable. After facing numerous challenges and enduring through various obstacles, I was finally able to succefuly modify and create someting of what I had learned. I
 
