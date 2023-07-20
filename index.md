@@ -14,6 +14,7 @@ This project uses an integration of Tenserflow and tflite on Raspberry Pi to det
 <p align="center">
 <img width="300" height="400" src="image_6483441.JPG">
 </p>
+My name is Tanisha, and I am a rising Junior at Cypress High School. I have always had a passion for STEM and engineering since I was young. I explored different fields and experimented with Arduino, Raspberry Pi, and more. Ever since the growing popularity of Artificial intelligence, I have been fascinated with the prospect of machine learning and AI. I chose this project as it would be a good learning opportunity to explore this field and have something I can build on. I had joined Bluestamp to get exposed to an engineering focused environment and have the opportunity to learn more from experts. I feel I have achieved through all that I learned from troubleshooting to learning how to understand and modify code. I hope to take what I learned from this program and apply it to future projects. 
 
 # Final Milestone
 <p align="center">
