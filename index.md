@@ -3,7 +3,12 @@
 This project uses an integration of Tenserflow and tflite on Raspberry Pi to detect and label objects. In this project, based on any desired object, the program will capture a picture and move a servo motor to point to a label listing the object's name.  
 
 # Introduction
-<center>![Headstone Image](image_6483441.JPG)</center>
+<p align="center">
+<img width="460" height="300" src="image_6483441.JPG">
+</p>
+
+![Headstone Image](image_6483441.JPG)
+
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
