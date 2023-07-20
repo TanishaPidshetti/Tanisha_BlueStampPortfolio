@@ -1,7 +1,7 @@
 
 # Object Detection with Tenserflow and Raspberry Pi
 <p align="center">
-<img width="270" height="300" src="image_6483441.JPG">
+<img width="270" height="300" src="Screen Shot 2023-07-20 at 10.48.44 AM.png">
 </p>
 This project uses an integration of Tenserflow and tflite on Raspberry Pi to detect and label objects. In this project, based on any desired object, the program will capture a picture and move a servo motor to point to a label listing the object's name.  
 
@@ -11,7 +11,7 @@ This project uses an integration of Tenserflow and tflite on Raspberry Pi to det
 | Tanisha P | Cypress High School | Aerospace Engineering | Incoming Junior
 
 <p align="center">
-<img width="270" height="300" src="image_6483441.JPG">
+<img width="250" height="300" src="image_6483441.JPG">
 </p>
 
 # Final Milestone
