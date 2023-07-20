@@ -1,21 +1,16 @@
+
+
 # Object Detection with Tenserflow and Raspberry Pi
 This project uses an integration of Tenserflow and tflite on Raspberry Pi to detect and label objects. In this project, based on any desired object, the program will capture a picture and move a servo motor to point to a label listing the object's name.  
 
- | **Engineer**|**School** |**Area of Interest** |**Grade** | 
- |:--:|:--:|:--:|:--:|
- | Tanisha P | Cypress High School | Aerospace Engineering | Incoming Junior
+| **Engineer** | **School** | **Area of Interest** | **Grade** |
+|:--:|:--:|:--:|:--:|
+| Tanisha P | Cypress High School | Aerospace Engineering | Incoming Junior
 
-# Picture of Me
-<img src="https://user-images.githubusercontent.com/72050310/180516357-11ce3a2c-c6c2-44a1-87a5-e348b9397158.jpg" width="300" height="400"/>
+**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
+![Headstone Image](logo.svg)
 
-# Project Picture 
-<img src= "https://user-images.githubusercontent.com/72050310/180518314-00cac4af-10e9-4404-a8d4-ea1087dc9ce2.jpg" width = "400" height = "200"/>
-
-# Project Video 
-<video src="https://user-images.githubusercontent.com/72050310/180522914-b6111730-d223-4188-ae10-3517eb8f7634.mp4" controls="controls" style="max-width: 730px;">
-</video>
-  
 # Final Milestone
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-vriJu8_hM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -31,42 +26,49 @@ For my final milestone, my goal was to implement changes to the code that would 
 With the Raspberry Pi setup complete, it was time for my second milestone of building the base project. I created a virtual environment to separate installed libraries and packages from my primary terminal background. Once I activated the new virtual environment, I downloaded different libraries to allow OpenCV to process images and videos, the TensorFlow Lite backend, and GUI processing. I faced many challenges during this step, as many of the libraries I needed to download were unavailable, and I had to find replacements. I attempted to approach this project differently when the errors and issues persisted. I installed the TensorFlow Lite runtime directly onto my Raspberry Pi and downloaded the files with the data and code the object detection program would use onto my virtual environment. I faced new issues downloading the setup files but soon figured it out. With all the libraries, discrepancies, and packages set, I ran the program on my Raspberry Pi. A real-time video feed would open up and have red boxes outlining each detected object with the name and a confidence marker. With the base project successful, I was ready for the next milestone. 
 
 # First Milestone
-  
-
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EvNvRWB8Lvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <center>
   
 My first milestone was setting up the Raspberry Pi hardware and software. With all the parts of the Raspberry Pi present, I assembled the physical components. Since the circuit quickly overheats, I attached heatsinks to the CPU, RAM, USB controller, and fan. In addition, I attached a Raspberry Pi Camera Module 2 due to my project's need for a camera. Once this step was completed, I inputted the SD card and connected the cabling, one to a power source and an HDMI to an external monitor. A raspberry pi interface opened up, and once I completed setting the configurations and updates, it was finally time to move to the next step. However, before I could start, I realized that I needed the Raspberry Pi OS directly downloaded to my SD card. This step would require wiping the SD card, including all my previous efforts, and restarting everything. After resetting the configurations and re-updating, the Raspberry Pi setup was finally completed and ready for the next milestone. 
 
-# Bill of Materials 
-Here is a list of everything you need for the project!
+# Code
+Detect.py:
+```python
+import os
+import pigpio
+import time
 
-| **Item** | **Quantity** | **Price** | **Link** |
+"""Setting the Servo"""
+servo = 18
+pwm = pigpio.pi ()
+pwm. set_ mode (servo, pigpio.OUTPUT) pwm. set_PWM_ frequency ( servo, 50 ) #servo
+= AngularServo (18, min_ pulse _width=0.0006, max_pulse width=0.0023)
+
+""""Main script to run the object detection routine."""
+import argparse
+import sys
+import time
+
+import cv2
+from tflite support. task import core
+from tflite support.task import processor
+from tflite _support.task import vision import utils
+
+pwm. set servo pulsewidth( servo, 500 ) ;
+```
+Utils.py:
+```python
+print("hi")
+```
+
+# Bill of Materials
+Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
+Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+
+| **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Breadboard | 1 | $2.99/count |https://tinyurl.com/yc8njk2w  |
-| Wires | 20 | $0.06/count |https://tinyurl.com/4f9u42mw |
-| Arduino | 1 | $27 |https://tinyurl.com/4e8n27yw |
-| Speaker/Amplifier | 1 | $11.99 | https://tinyurl.com/wwpmkfcx |
-| Accelerometer | 1 | $3.33/count | https://tinyurl.com/5896vvbk |
-| Ultrasonic Sensor | 1 | $1.83/count | https://tinyurl.com/3c6zuk3w |
-| Soldering Kit | 1 | $19.99 | https://tinyurl.com/3embv5ct |
-| Glove | 1 | $5.99 | https://tinyurl.com/myjw8ejd |
-| Hot Glue Gun | 1 | $14.99 | https://tinyurl.com/5c53sdv5 |
-| Resistors | 4 | $1.04/count | https://tinyurl.com/5yb2psfc |
-| Conductive Fabric | 1 | $15.99 |https://tinyurl.com/vr52v38t |
-
-
-# Schematic 
-NOTE: The pins on the Arduino Uno do not represent the actual orientation, it is simply a reference. Please refer to the Ardunino Pinout (and other pinouts) linked below. 
-
-<img src="https://user-images.githubusercontent.com/72050310/180590632-e17755ef-0d13-4bf6-8d67-355a4af92291.png" width="400" height="200"/>
-
-
-In my project, I used an external VRM for the speaker since the Ardunino can only supply 200mA, the speaker needed more than that. So, the speaker is powered by the external VRM. 
-
-# Pinout/Useful Links 
-1. Arduino - https://docs.arduino.cc/hardware/uno-rev3
-3. Accelerometer to Arduino - https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/
-4. Ultrasonic to Arduino - https://create.arduino.cc/projecthub/abdularbi17/ultrasonic-sensor-hc-sr04-with-arduino-tutorial-327ff6 
-5. Voltage Regulator Module (VRM) - pinout for this is in the product on amazon, you can find the link in the bill of materials. 
+| Raspberry Pi | What the item is used for | $Price | <a href="https://www.amazon.com/GeeekPi-Raspberry-Pi-8GB-Kit/dp/B0B5KHJZP9/ref=sr_1_1_sspa?hvadid=570572414387&hvdev=c&hvlocphy=9031057&hvnetw=g&hvqmt=e&hvrand=2442289902254032771&hvtargid=kwd-296166721380&hydadcr=19137_13375058&keywords=how+much+is+a+raspberry+pi&qid=1689775120&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Raspberry Pi Camera | What the item is used for | $Price | <a href="https://www.amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4/ref=sr_1_1_sspa?crid=3F4I9IV6329Y8&keywords=raspberry+pi+camera&qid=1689776668&sprefix=raspberry+pi+camera%2Caps%2C160&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Wireless Keyboard and Mouse | What the item is used for | $Price | <a href="https://www.amazon.com/Wireless-Keyboard-Cordless-Windows-Computer/dp/B0B1BQNCPR/ref=asc_df_B0B1BQNCPR/?tag=hyprod-20&linkCode=df0&hvadid=615968724865&hvpos=&hvnetw=g&hvrand=10613761028077811130&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031057&hvtargid=pla-1721006500455&psc=1"> Link </a> |
+| Servo | What the item is used for | $Price | <a href="https://www.amazon.com/Sipytoph-Helicopter-Airplane-Walking-Control/dp/B09185SC1W/ref=sr_1_10?crid=3W27277QBTU3Y&keywords=single+SG90+9G+Micro+Servo&qid=1689776859&sprefix=single+sg90+9g+micro+servo%2Caps%2C132&sr=8-10"> Link </a> |
