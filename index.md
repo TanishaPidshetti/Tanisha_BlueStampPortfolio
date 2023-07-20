@@ -1,11 +1,11 @@
 
 
-# Sandeep Object Detection with Tenserflow and Raspberry Pi
+#  Object Detection with Tenserflow and Raspberry Pi
 This project uses an integration of Tenserflow and tflite on Raspberry Pi to detect and label objects. In this project, based on any desired object, the program will capture a picture and move a servo motor to point to a label listing the object's name.  
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Tanisha P | Cypress High School | Aerospace Engineering | Incoming Junior
+| Tanisha Pidshetti | Cypress High School | Aerospace Engineering | Incoming Junior
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
