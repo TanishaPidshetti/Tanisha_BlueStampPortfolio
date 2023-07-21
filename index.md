@@ -41,7 +41,7 @@ My first milestone was setting up the Raspberry Pi hardware and software. With a
 # Schematics
 
 <p align="center">
-<img width="300" height="400" src="image_6483441.JPG">
+<img width="300" height="400" src="Screen Shot 2023-07-21 at 7.10.48 AM.png.JPG">
 </p>
 
 # Code
